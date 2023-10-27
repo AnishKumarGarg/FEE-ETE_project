@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3b9e239c56.js" crossorigin="anonymous"></script>
+    <title>Overview</title>
+</head>
+<style>
+    .buy {
+        background-color: white;
+        color: black;
+        border: 2px solid #f44336;
+        height: 3em;
+    }
+
+    .buy:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid black;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .options {
+        display: flex;
+        gap: 5em;
+    }
+
+    .menu {
+        display: flex;
+        gap: 10em;
+    }
+
+    .product-image {
+        position: relative;
+        height: 66px;
+    }
+
+    .buy {
+        width: 93px;
+    }
+
+    .options a {
+        padding-bottom: 11px;
+        padding-top: 11px;
+        transition: 0.3s all ease;
+        text-decoration: none;
+        color: black;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .options a:hover {
+        transform: scale(1.2);
+        background-color: rgb(223, 226, 228);
+    }
+
+    .overview {
+        background-color: rgb(223, 226, 228);
+        border-bottom: 5px solid grey;
+    }
+
+    .options a:active {
+        border-bottom: 5px solid grey;
+    }
+
+    .Overview_banner {
+        height: 27em;
+        width: 100%;
+        margin-bottom: 6em;
+    }
+
+    .about {
+        margin-left: 10%;
+    }
+
+    .stars a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .stars a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .stars {
+        margin-bottom: 49px;
+    }
+
+    #product1 {
+        display: flex;
+        padding-top: 3em !important;
+        width: 95%;
+        margin-bottom: 8em;
+    }
+
+    .in-crystal-uhd {
+        width: 262px;
+        height: 244px;
+    }
+
+    #about {
+        padding-left: 20px;
+    }
+
+    #buy {
+        border-left: 1px solid rgb(174 170 170);
+        padding-left: 20px;
+    }
+
+    .AmazingBrightness {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .AmazingBrightness-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+
+    .IntenseContrast {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .IntenseContrast-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Sound {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .Sound-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Gaming {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .Gaming-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Design {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .Design-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Video {
+        text-align: center;
+        margin-bottom: 7em;
+    }
+
+    iframe {
+        margin-top: 3em;
+    }
+
+
+    .Reviews {
+        font-family: Arial;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px;
+        margin-bottom: 7em;
+    }
+
+
+    .heading {
+        font-size: 37px;
+        margin-right: 25px;
+    }
+
+    .fa {
+        font-size: 25px;
+    }
+
+    .checked {
+        color: orange;
+    }
+
+    .left {
+        width: 50%;
+        font-size: 20px;
+    }
+
+
+
+
+    .footer-container {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        background-color: black;
+        padding: 75px 14%;
+        /* margin-top: 50px; */
+    }
+
+    .col2 {
+        flex-grow: 2;
+    }
+
+
+    .footer-container div h3 {
+        color: white;
+        font-family: Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+
+    .footer-container .col3 p {
+        color: white;
+        font-family: Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+
+    .footer-container .col1 a {
+        color: white;
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        font-family: Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+    }
+
+    .col2 input {
+        width: 400px;
+        text-align: center;
+        outline: none;
+        height: 45px;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        border: none;
+    }
+
+
+    .col2 button {
+        background: transparent;
+        color: #fff;
+        border-radius: 30px;
+        border: 2px solid #fff;
+        font-size: 15px;
+        padding: 10px 30px;
+        cursor: pointer;
+    }
+
+    .social-icon {
+        margin-top: 20px;
+    }
+
+    .social-icon i {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="product">
+            <img class="product-image" src="X90L.png" alt="Image of product">
+
+            <div class="product-title" style="margin-left: 18px;">
+                <p class="description">
+                    X90L/X91BL | BRAVIA XR | Full Array LED | 4K Ultra HD | High Dynamic Range (HDR) | Smart TV (Google
+                    TV)
+                </p>
+                <p class="product_name">
+                <h3>X90L Series</h3>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="menu">
+            <div class="options">
+                <a class="overview" href="overview.html">Overview</a>
+                <a class="features" href="specifications.html">Specifications</a>
+                <a class="specs" href="Reviews.html">Reviews</a>
+            </div>
+            
+            <a href="paymentform.html"><button class="buy">Buy</button></a>
+        </div>
+    </div>
+    <div class="banner">
+        <img class="Overview_banner" src="Overview_banner.jpeg">
+    </div>
+
+    <div class="about">
+        <h2>Vibrant contrast.</h2>
+        <h2>Vibrant colours.</h2>
+        <p>Our amazing 4K Full Array LED TV powered by Cognitive Processor XR™ delivers realistic depth and intense
+            contrast. A newly designed local dimming structure brings scenes vividly to life. What you hear matches what
+            you see.</p>
+        <div class="reviews">
+            <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span>4</span>
+                <span><a href="Reviews.html">(18 customer reviews)</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4 shadow rounded custom-product-container" id="product1"
+        style="background-color: aliceblue;">
+        <div id="image">
+            <img src="lcd-led-tv-2048px-0943-3x2-1.jpg" class="in-crystal-uhd" alt="image here">
+        </div>
+        <div id="about">
+            <h4 id="product_name">1m 08cm(43") AU65 Crystal 4K UHD Smart TV</h4>
+            <p id="list">
+            <ul type="circle">
+                <li>PurColor</li>
+                <li>Crystal Processor 4K</li>
+                <li>Smart Hub</li>
+            </ul>
+            </p>
+        </div>
+        <div class="m-3" id="buy">
+            <p style="margin-bottom: 2px;">MRP(inclusive of all taxes) <s>Rs 52900.00</s></p>
+            <p style="color: blue; margin-bottom: 2px;">Save Rs 21910.00</p>
+            <h4>Rs 30900.00</h4>
+            <p><u>No cost EMI starts from Rs 3443.33/month</u></p>
+            <p><i class="fa-solid fa-check fa-sm"></i> in stock</p>
+            <p><a href="add_to_cart/add_to_cart/addtocart.html"><button type="button" class="btn btn-primary btn-lg btn-block w-100 rounded custom-buynow-btn">Add to
+            Cart
+                </button></a></p>
+
+        </div>
+    </div>
+
+    <div class="AmazingBrightness">
+        <p class="Headline1">
+        <h2>Amazing Brightness. Piercing Contrast</h2>
+        </p>
+        <p class="HeaderText1">
+            Vivid. Bright. Crisp. See breathtakingly beautiful pictures full of realistic depth on our Full Array LED
+            screen powered by Cognitive Processor XR™.
+        </p>
+        <img class="AmazingBrightness-image" src="TVFY23_X90L_Overview_TopMessage_D-1.jpg">
+    </div>
+
+    <div class="IntenseContrast">
+        <p class="Headline2">
+        <h2>Intense contrast,</h2>
+        <h2>Feel the depth</h2>
+        </p>
+        <p class="HeaderText2">
+            Cognitive Processor XR™ controls the backlight of our Full Array LED in zones for ultra-realistic contrast
+            in bright and dark areas simultaneously
+        </p>
+        <img class="IntenseContrast-image" src="TVFY23_X90L_Overview_Picture_D-1.jpg">
+    </div>
+
+    <div class="Sound">
+        <p class="Headline3">
+        <h2>Sound harmonised. Pictures synchronised. </h2>
+        </p>
+        <p class="HeaderText3">
+            Whatever you’re watching, Cognitive Processor XR™ reproduces sound that perfectly matches the action.
+        </p>
+        <img class="Sound-image" src="TVFY23_TF_TP_FM2_TC_FES2_Top_Sound_D-1.jpg">
+    </div>
+
+    <div class="Gaming">
+        <p class="Headline4">
+        <h2>Game time. Be invincible. </h2>
+        </p>
+        <p class="HeaderText4">
+            Our BRAVIA XR™ TVs capture the awesome graphics and soundscapes of today’s games. Want more? Pair with a
+            PlayStation® 5 console for absolute immersion.
+        </p>
+        <img class="Gaming-image" src="TVFY23_C_Top_Game_nologo_D.jpg">
+    </div>
+
+    <div class="Design">
+        <p class="Headline5">
+        <h2>Designed slim. Machined in metal.</h2>
+        </p>
+        <p class="HeaderText5">
+            Sleek, seamless and sophisticated. But the real beauty of this TV is how it focuses you on what’s important
+            – the picture.
+        </p>
+        <img class="Design-image" src="TVFY23_X90L_Overview_Design_D-1.jpg">
+    </div>
+
+    <div class="Video">
+        <p class="Headline6">
+        <h1>See what makes this special</h1>
+        </p>
+        <div class="Video-container">
+            <iframe width="1280" height="778" src="https://www.youtube.com/embed/g5fKxOAt_V4"
+                title="2023 Sony X90L BRAVIA XR Full Array LED 4K TV | Official Video" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <details>
+                <summary style="font-size: x-large;">Description</summary>
+                <p>This video introduces the 2023 model of Sony X90L BRAVIA XR 4K Full Array LED TV.</p>
+                <p>This TV provides an immersive experience with high picture and sound quality for all types of
+                    content.</p>
+                <p>Cognitive Processor XR maximises the potential of Full Array LED to achieve amazing brightness,
+                    piercing
+                    contrast.</p>
+                <p>With Acoustic Multi Audio, it feels as though sound is coming from the right place in the scene,
+                    precisely matching visuals.</p>
+                <p>BRAVIA CAM recognises where you're sitting and optimises settings accordingly.</p>
+                <p>Our BRAVIA XR TVs capture the awesome graphics and soundscapes of today's games.</p>
+                <p>Our minimalist One Slate design fuses screen and bezel into a single slate, minimising noise and
+                    maximising your viewing experience. It comes equipped with a prestige multi-position stand.</p>
+            </details>
+        </div>
+    </div>
+
+    <hr style="border:3px solid #3b3838">
+
+    <div class="Reviews">
+        <span class="heading">User Rating</span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star" style="font-size: 37px;"></span>
+        <p style="font-size: 22px;"><a href="Reviews.html">4.1 average based on 254 reviews.</a></p>
+        <hr style="border:3px solid #a19f9f">
+        <div class="detailed-review">
+            <div class="container1">
+                <div class="left">
+                    Picture Quality
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="left">
+                    Sound Quality
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="left">
+                    Design
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="left">
+                    Ease of Use
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="col1">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="home/product-filter-section-html-css-js/index.html">Home</a></li>
+                    <li><a href="TV_list.html">Products</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col2">
+                <h3>NEWSLETTER</h3>
+                <form action="">
+                    <input type="text" placeholder="Enter Email Address" required><br>
+                    <button class="btn1" type="submit">SUBSCRIBE NOW</button>
+                </form>
+            </div>
+
+            <div class="col3">
+                <h3>CONTACT</h3>
+                <p>123, XYZ Road, BSK 3<br> Patiala, Punjab, IN</p>
+                <div class="social-icon">
+                    <i class="fa-brands fa-instagram fa-bounce" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-facebook fa-bounce" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter fa-bounce" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-discord fa-bounce" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

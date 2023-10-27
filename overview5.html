@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3b9e239c56.js" crossorigin="anonymous"></script>
+    <title>Overview</title>
+</head>
+<style>
+    .buy {
+        background-color: white;
+        color: black;
+        border: 2px solid #f44336;
+        height: 3em;
+    }
+
+    .buy:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid black;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .options {
+        display: flex;
+        gap: 5em;
+    }
+
+    .menu {
+        display: flex;
+        gap: 10em;
+    }
+
+    .product-image {
+        position: relative;
+        height: 66px;
+    }
+
+    .buy {
+        width: 93px;
+    }
+
+    .options a {
+        padding-bottom: 11px;
+        padding-top: 11px;
+        transition: 0.3s all ease;
+        text-decoration: none;
+        color: black;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .options a:hover {
+        transform: scale(1.2);
+        background-color: rgb(223, 226, 228);
+    }
+
+    .overview {
+        background-color: rgb(223, 226, 228);
+        border-bottom: 5px solid grey;
+    }
+
+    .options a:active {
+        border-bottom: 5px solid grey;
+    }
+
+    .Overview_banner {
+        height: 27em;
+        width: 100%;
+        margin-bottom: 6em;
+    }
+
+    .about {
+        margin-left: 10%;
+    }
+
+    .stars a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .stars a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .stars {
+        margin-bottom: 49px;
+    }
+
+    #product1 {
+        display: flex;
+        padding-top: 3em !important;
+        width: 95%;
+        margin-bottom: 8em;
+    }
+
+    .in-crystal-uhd {
+        width: 262px;
+        height: 244px;
+    }
+
+    #about {
+        padding-left: 20px;
+    }
+
+    #buy {
+        border-left: 1px solid rgb(174 170 170);
+        padding-left: 20px;
+    }
+
+    .AmazingBrightness {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .AmazingBrightness-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+
+    .IntenseContrast {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .IntenseContrast-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Sound {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .Sound-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Gaming {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .Gaming-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Design {
+        text-align: center;
+        margin-bottom: 13em;
+    }
+
+    .Design-image {
+        width: 80em;
+        margin-top: 3em;
+    }
+
+    .Video {
+        text-align: center;
+        margin-bottom: 7em;
+    }
+
+    iframe {
+        margin-top: 3em;
+    }
+
+
+    .Reviews {
+        font-family: Arial;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px;
+        margin-bottom: 7em;
+    }
+
+
+    .heading {
+        font-size: 37px;
+        margin-right: 25px;
+    }
+
+    .fa {
+        font-size: 25px;
+    }
+
+    .checked {
+        color: orange;
+    }
+
+    .left {
+        width: 50%;
+        font-size: 20px;
+    }
+
+
+
+
+    .footer-container {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        background-color: black;
+        padding: 75px 14%;
+        /* margin-top: 50px; */
+    }
+
+    .col2 {
+        flex-grow: 2;
+    }
+
+
+    .footer-container div h3 {
+        color: white;
+        font-family: Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+
+    .footer-container .col3 p {
+        color: white;
+        font-family: Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+
+    .footer-container .col1 a {
+        color: white;
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        font-family: Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+    }
+
+    .col2 input {
+        width: 400px;
+        text-align: center;
+        outline: none;
+        height: 45px;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        border: none;
+    }
+
+
+    .col2 button {
+        background: transparent;
+        color: #fff;
+        border-radius: 30px;
+        border: 2px solid #fff;
+        font-size: 15px;
+        padding: 10px 30px;
+        cursor: pointer;
+    }
+
+    .social-icon {
+        margin-top: 20px;
+    }
+
+    .social-icon i {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="product">
+            <img class="product-image" src="TVFY23_X70L_Primary-Image.jpg" alt="Image of product">
+
+            <div class="product-title" style="margin-left: 18px;">
+                <p class="description">
+                    X70L | 4K Ultra HD | High Dynamic Range (HDR) | Smart TV (Google TV) | Optional Stand
+                </p>
+                <p class="product_name">
+                <h3>X70L Series</h3>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="menu">
+            <div class="options">
+                <a class="overview" href="overview5.html">Overview</a>
+                <a class="features" href="specifications5.html">Specifications</a>
+                <a class="specs" href="Reviews5.html">Reviews</a>
+            </div>
+            <a href="paymentform.html"><button class="buy">Buy</button></a>
+        </div>
+    </div>
+    <div class="banner">
+        <img class="Overview_banner" src="Overview_banner.jpeg">
+    </div>
+
+    <div class="about">
+        <h2>Thrilling entertainment.</h2>
+        <h2>4K HDR.</h2>
+        <p>Our smart TV delivers exciting content in 4K HDR. Even 2K pictures are upscaled to near 4K quality with sharp details and billions of real-world colours, reproduced by our 4K Processor X1™. Lifelike audio is fine tuned for a thrilling experience. ​</p>
+        <div class="reviews">
+            <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span>4</span>
+                <span><a href="Reviews5.html">(18 customer reviews)</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4 shadow rounded custom-product-container" id="product1"
+        style="background-color: aliceblue;">
+        <div id="image">
+            <img src="TVFY23_X70L_Primary-Image.jpg" class="in-crystal-uhd" alt="image here">
+        </div>
+        <div id="about">
+            <h4 id="product_name">1m 08cm(43") AU65 Crystal 4K UHD Smart TV</h4>
+            <p id="list">
+            <ul type="circle">
+                <li>MORE DETAILED PICTURES: 4K Processor X1™ | 4K X-Reality™ PRO</li>
+                <li>LIFELIKE AUDIO: Clear Phase</li>
+                <li>ENTERTAINMENT YOU LOVE. WITH A LITTLE HELP FROM GOOGLE.</li>
+                <li>MADE TOUGH, MADE TO LAST : X-Protection PRO</li>
+            </ul>
+            </p>
+        </div>
+        <div class="m-3" id="buy">
+            <p style="margin-bottom: 2px;">MRP(inclusive of all taxes) <s>59900.00</s></p>
+            <p style="color: blue; margin-bottom: 2px;">Save Rs 10990.00</p>
+            <h4>Rs 49000.00</h4>
+            <p><u>No cost EMI starts from Rs 3443.33/month</u></p>
+            <p><i class="fa-solid fa-check fa-sm"></i> in stock</p>
+            <p><a href="add_to_cart/add_to_cart/addtocart.html"><button type="button"
+                        class="btn btn-primary btn-lg btn-block w-100 rounded custom-buynow-btn">Add to
+                        Cart
+                    </button></a></p>
+
+        </div>
+    </div>
+
+    <div class="AmazingBrightness">
+        <p class="Headline1">
+        <h2>Recreating pictures.</h2>
+        <h2>Redefining clarity. </h2>
+        </p>
+        <p class="HeaderText1">
+            Even your favourites in 2K and HD are upscaled close to 4K quality, thanks to 4K X-Reality™ PRO.
+        </p>
+        <img class="AmazingBrightness-image" src="overview5image1.jpg">
+    </div>
+
+    <div class="IntenseContrast">
+        <p class="Headline2">
+        <h2>Sound that feels real</h2>
+        </p>
+        <p class="HeaderText2">
+            Clear Phase fine tunes sound so you’ll hear lifelike audio from your TV speakers with the best possible separation and clarity.
+        </p>
+        <img class="IntenseContrast-image" src="overview5image2.jpg">
+    </div>
+
+    <div class="Sound">
+        <p class="Headline3">
+        <h2>Screen speaker,<br>
+            always immersive</h2>
+        </p>
+        <p class="HeaderText3">
+            As the story unfolds before your eyes, you'll hear a soundtrack that precisely matches the action. Much the same as in a movie theatre.
+        </p>
+        <img class="Sound-image" src="overview4image3.jpg">
+    </div>
+
+    <div class="Sound">
+        <p class="Headline3">
+        <h2>Entertainment you love. With help from Google.</h2>
+        </p>
+        <p class="HeaderText3">
+            Google TV brings together movies, shows, and more from across your apps and subscriptions and organises them just for you.
+        </p>
+        <img class="Sound-image" src="overview3image2.jpg">
+    </div>
+
+    <div class="Design">
+        <p class="Headline5">
+        <h2>Made tough. Made to last.</h2>
+        </p>
+        <p class="HeaderText5">
+            X-Protection PRO protects this TV from unwanted conditions and unforeseen events including dust, humidity, power surges, and lightning strikes. Now you can keep watching without disruption.
+        </p>
+        <img class="Design-image" src="overview5image3.jpg">
+    </div>
+
+    <div class="Design">
+        <p class="Headline5">
+        <h2>Beautifully refined </h2>
+        </p>
+        <p class="HeaderText5">
+            Designed with a narrow bezel, this TV has a seamless and refined look that blends harmoniously with contemporary decor.
+        </p>
+        <img class="Design-image" src="overview5image4.jpg">
+    </div>
+
+    
+
+    <hr style="border:3px solid #3b3838">
+
+    <div class="Reviews">
+        <span class="heading">User Rating</span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star checked" style="font-size: 37px;"></span>
+        <span class="fa fa-star" style="font-size: 37px;"></span>
+        <p style="font-size: 22px;"><a href="Reviews.html">4.1 average based on 254 reviews.</a></p>
+        <hr style="border:3px solid #a19f9f">
+        <div class="detailed-review">
+            <div class="container1">
+                <div class="left">
+                    Picture Quality
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="left">
+                    Sound Quality
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="left">
+                    Design
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="left">
+                    Ease of Use
+                </div>
+                <div class="middle">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="col1">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="home/product-filter-section-html-css-js/index.html">Home</a></li>
+                    <li><a href="TV_list.html">Products</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col2">
+                <h3>NEWSLETTER</h3>
+                <form action="">
+                    <input type="text" placeholder="Enter Email Address" required><br>
+                    <button class="btn1" type="submit">SUBSCRIBE NOW</button>
+                </form>
+            </div>
+
+            <div class="col3">
+                <h3>CONTACT</h3>
+                <p>123, XYZ Road, BSK 3<br> Patiala, Punjab, IN</p>
+                <div class="social-icon">
+                    <i class="fa-brands fa-instagram fa-bounce" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-facebook fa-bounce" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter fa-bounce" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-discord fa-bounce" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

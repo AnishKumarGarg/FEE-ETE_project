@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container {
+        position: relative;
+        width: 300px;
+        margin-left: 0;
+        margin-right: 1em;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: aliceblue;
+    }
+
+    .container:hover .overlay {
+        opacity: 0.5;
+    }
+
+    .text {
+        color: black;
+        opacity: 1;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .container-top{
+        display: flex;
+    }
+
+ 
+
+</style>
+
+<body>
+        <div class="container-top">
+            <div class="container">
+                <img src="Wireless_earphone.png" alt="earphone" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p>WF-1000XM4 Wireless Noise cancelling Headphones</p>
+                        <p>MRP Rs.26,900</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Wireless_headphone.png" alt="Headphones" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p>WH-CH120 Wireless Headphones</p>
+                        <p>MRP Rs.5,990</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="X70L_TV.png" alt="X70L_TV" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p>WH-CH120 Wireless Headphones</p>
+                        <p>MRP Rs.59,990</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <img src="Wireless_Speakers.png">
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="addtocart.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+    </style>
+    <body>
+         <div class="navbar">
+        <div class="leftnav">
+            <a class="home" href="../../home/product-filter-section-html-css-js/index.html">Home</a>
+            <a class="TV" href="../../TV_list.html">Buy Products</a>
+            <!-- <a class="PS" href="">PlayStation</a> -->
+        </div>
+        <div class="logo">
+            <p>TechKart</p>
+        </div>
+        <div class="rightnav">
+            <input type="search" placeholder="Search" id="search-input">
+            <a class="login" href="../../login.html">Login</a>
+            <a class="signup" href="../../signup.html">SignUp</a>
+
+        </div>
+    </div>
+        <div class="header">
+            <p class="logo">TechKart</p>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">Rs. 0.00</h2>
+                </div>
+                <form action="../../paymentform.html">
+                    <button class="button-84" role="button">Proceed to Checkout</button>
+                </form>
+            </div>
+        </div>
+        <script src="addtocart.js"></script>
+    </body>
+</html>

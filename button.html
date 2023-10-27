@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .button {
+        background-color: aqua;
+        color: aliceblue;
+        width: 400px;
+        height: 100px;
+        font-size: x-large;
+        position: relative;
+    }
+
+    .button::before {
+        content: "Click me";
+
+    }
+
+    .button:hover::before {
+        content: "Hovered";
+    }
+
+    .button2 {
+        padding: 0.75em 2em;
+        background-color: red;
+        color: white;
+        font-size: large;
+    }
+
+    .button2:hover {
+        background-color: rgb(197, 18, 18);
+    }
+
+    .button2:active {
+        background-color: rgb(130, 9, 9);
+    }
+
+</style>
+
+<body>
+    <button class="button"></button>
+    <button class="button2">Click me</button>
+</body>
+
+</html>
